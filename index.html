@@ -1,1 +1,161 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basal metabolic rate calculation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Basal metabolic rate calculation">
+  <meta name="author" content="Zeng Mingwei">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Basal metabolic rate calculation</h1>
+    <h2></h2>
+    <p>Zeng Mingwei<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>What is basal metabolic rate?
+Basal metabolic rate (BMR) is the rate of energy expenditure by humans and other animals at rest.</p></li>
+<li><p>Understand how much kcals your body needed in order to maitain the basic energy expenditure.</p></li>
+<li><p>To keep you healthy you must fulfill this lowest standard.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Harris-Benedict Equation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Several prediction equations exist. Historically, the most notable one was the Harris-Benedict equation:</p>
+
+<p>for men,</p>
+
+<p>13.7516 * weight + 5.0033 * height - 6.7550 * age + 66.4730</p>
+
+<p>for women,</p>
+
+<p>9.5634 * weight + 1.8496 * height - 4.6756 * age + 655.0955</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Shiny app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>How it works?</p>
+
+<ol>
+<li><p>Input your sex, age, height in cm, weight in kg.</p></li>
+<li><p>Click &#39;Calculate!&#39;, the app will return your BMR.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Shiny app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Example</p>
+
+<pre><code class="r">sex &lt;- &#39;Male&#39;
+age &lt;- 23
+height &lt;- 173
+weight &lt;- 59
+BMR &lt;- (sex==&#39;Male&#39;)*(66.4730+13.7516*weight + 5.0033*height - 6.7550*age) + 
+    (sex==&#39;Female&#39;)*(655.0955 + 9.5634*weight + 1.8496*height - 4.6756*age)
+BMR
+</code></pre>
+
+<pre><code>## [1] 1588
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Harris-Benedict Equation'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Shiny app'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shiny app'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
